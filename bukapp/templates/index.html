@@ -1,0 +1,107 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajmal Book Store</title>
+    <link rel="stylesheet" href="{% static 'bukapp/styles.css' %}">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
+</head>
+<body>
+    
+    <header>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-image: url("{% static 'bukapp/back2.jpg' %}");
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-position:right;
+            }
+
+            nav ul li a {
+            color: rgb(7, 5, 5);
+            text-decoration: none;
+            padding: 10px 20px;
+            transition: background-color 0.3s;
+        }
+            nav ul li a:hover {
+            background-color: #107ab7; /* Change this to your desired hover color */
+        }
+
+            nav ul li a,
+            .user-options a {
+            color: rgb(57, 11, 9);
+            text-decoration: none;
+            padding: 10px 20px;
+            transition: background-color 0.3s;
+    }
+            nav ul li a:hover,
+            .user-options a:hover {
+            background-color: #bfdee4; /* Change this to your desired hover color */
+    }
+    
+        </style>
+
+
+        <div class="top-bar">
+            <div class="logo">
+            <a href="/"><img src="{% static 'bukapp/logo2.jpeg' %}" alt="CDW Logo"></a>
+            </div>
+            <nav>
+                <ul>
+                    
+                    <li><a href="{% url 'about' %}">| About Us</a></li>
+                    <li><a href="{% url 'book_list' %}">| Available Books</a></li>
+                    <li><a href="{% url 'book_search' %}">| Search Books</a></li>
+                    <li><a href="{% url 'buy_books' %}">| Buy Books</a></li>
+                    <li><a href="#">| Download App</a></li>
+                    <li><a href="#">| Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="search-bar">
+                <input type="text" placeholder="Search ISBN: Google">
+                <button><img src="{% static 'bukapp/search.png' %}" alt="Search"></button>
+            </div>
+            <div class="user-options">
+                <a href="#"><i class="fas fa-bell"></i><span>Notifications</span></a>
+                <a href="#"><i class="fas fa-shopping-cart"></i><span>Cart</span></a>
+                <a href="/login/" class="dropbtn"><i class="fas fa-sign-in-alt"></i><span>Sign In</span></a>
+                <a href="/register/" class="dropbtn"><i class="fas fa-sign-in-alt"></i><span>Sign Up</span></a>
+                <a href="/admin/" class="dropbtn"><i class="fas fa-sign-in-alt"></i><span>Admin Panel</span></a>
+                <a href="/profile/" class="dropbtn"><i class="fas fa-sign-in-alt"></i><span>Profile</span></a>
+
+            </div>
+        </div>
+        
+        </div>
+    </header>
+    <main>
+       <br><br><br><br><br><br>
+        <div class="container">
+          <h1>Welcome !</h1>
+            <h2> Search Books : | Title | Author | Keywords</h2>
+            <br>
+            <div class="search-bar">
+                <input type="text" placeholder="Search">
+                <button><img src="{% static 'bukapp/sea.jpeg' %}" alt="Search"></button>
+            </div>
+            <br><br>
+            <div class="footer-social">
+                <span>Follow CyberBooks on</span>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+            <div class="footer-content">
+                <p>&copy; 2024 Ajmal's Book Store. All rights reserved.</p>
+        </div>
+        
+    </main>
+    
+</body>
+</html>
