@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-brm*!q=v==yz1=g$bc(l4ab8bu!6=uti7sv^7nmq6ww1^g(5d&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['bukproject.azurewebsites.net', 'www.bukproject.azurewebsites.net']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
